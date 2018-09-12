@@ -8,12 +8,7 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
 	<bean name="emp" class="com.jagan.spring.springcore.Employee">
-	<property name="id">
-		<value>10</value>
-	</property>
-	
-	<property name="name">
-		<value>Jaga</value>
-	</property>
+		<property name="id" value="10" />
+		<property name="name" value="Ramesh"/>
 	</bean>
 </beans>

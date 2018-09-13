@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+<bean name="student" class="com.jagan.spring.springcore.map.Student">
+	<property name="name" value="Jagannath"/>
+	<property name="age" value="29"/>
+	
+	<property name="marks">
+	<map>
+	<!-- Differrent way to create Map Entry -->
+	<!-- Option 1 -->
+	<entry key="Math" value="98" />
+	
+	<!-- Option 2 -->
+	<entry value="55">
+		<key>
+		<value>English</value>
+		</key>
+	</entry>
+	
+	<!-- Option 3 -->
+	<entry key="Physics">
+		<value>88</value>
+	</entry>
+	
+	
+	<!-- Option 4 -->
+	<entry>
+	<key>
+		<value>Chemistry</value>
+	</key>
+	<value> 78 </value>
+	
+	</entry>
+	</map>
+	</property>
+</bean>
+
+</beans> 

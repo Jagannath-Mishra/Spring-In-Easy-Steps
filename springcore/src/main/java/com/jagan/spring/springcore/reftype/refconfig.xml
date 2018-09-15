@@ -24,4 +24,8 @@
 		<!-- <bean name="students" class="com.jagan.spring.springcore.reftype.Students"  p:scoresHasA-ref="scores"/> -->
 		
 	<!-- </bean> --> 
+	
+	<bean name="item" class="com.jagan.spring.springcore.reftype.Item" p:id="12" p:name="Gariyashee Dutta Mishra" p:price="548.45" p:quantity="45" />
+	<bean name="shoping" class="com.jagan.spring.springcore.reftype.ShopingCart" p:item-ref="item" />
+	
 </beans> 

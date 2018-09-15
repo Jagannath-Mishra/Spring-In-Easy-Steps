@@ -7,12 +7,11 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean name="student" class="com.jagan.spring.springcore.lifecycle.annotation.Student" >
-	 <property name="id" value="20" />
+
+	<bean name="pescription" class="com.jagan.spring.springcore.dependancy.check.Pescription" >
+		<!-- <property name="id"  value="10"/>
+		<property name="name" value="Jagannathe" />
+		
+		<property name=""></property> -->
 	</bean>
-	
-	<!-- Enabling all annotation  -->
-	<context:annotation-config />
-	
-	<!-- <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" /> --> <!-- For individual annotation support -->
 </beans>

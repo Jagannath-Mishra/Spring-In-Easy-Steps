@@ -11,5 +11,8 @@
 	 <property name="id" value="20" />
 	</bean>
 	
-	<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" /> <!-- For individual annotation support -->
+	<!-- Enabling all annotation  -->
+	<context:annotation-config />
+	
+	<!-- <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" /> --> <!-- For individual annotation support -->
 </beans>

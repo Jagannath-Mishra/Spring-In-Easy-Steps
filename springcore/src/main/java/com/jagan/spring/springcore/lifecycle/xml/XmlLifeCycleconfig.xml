@@ -7,18 +7,7 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-
-	<bean name="hospital" class="com.jagan.spring.springcore.list.Hospital">
-		<property name="name">
-		<value>Continental Hospital</value>
-		</property>
-		
-		<property name="departments">
-		
-				<value>Radiology</value>
-				<value>X-Ray</value>
-				<value>Emergency</value>
-		
-		</property>
+	<bean name="patient" class="com.jagan.spring.springcore.lifecycle.xml.Patient" init-method="hi" destroy-method="bye" >
+	 <property name="id"><value>10</value></property>
 	</bean>
-</beans> 
+</beans>

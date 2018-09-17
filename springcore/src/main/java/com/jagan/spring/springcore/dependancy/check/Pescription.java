@@ -2,13 +2,17 @@ package com.jagan.spring.springcore.dependancy.check;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Required;
+
 public class Pescription {
+	
 	private int id;
 	private String name;
 	List<String> medicines;
 	public int getId() {
 		return id;
 	}
+	@Required
 	public void setId(int id) {
 		this.id = id;
 	}

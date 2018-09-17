@@ -19,8 +19,12 @@ public class TestApp {
 		/*int result =  employeeDAO.create(emp);
 		System.out.println("Number of records inserted are: " + result);*/
 		
-		int result = employeeDAO.update(emp);
+		/*int result = employeeDAO.update(emp);
 		
-		System.out.println("Number of records updated are: " + result);
+		System.out.println("Number of records updated are: " + result);*/
+		
+		int result = employeeDAO.delete(1);
+		
+		System.out.println("Number of records deleted are: " + result);
 	}
 }

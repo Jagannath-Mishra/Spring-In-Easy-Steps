@@ -26,6 +26,13 @@ public class EmployeeDaoImpl implements employeeDao {
 		return result;
 	}
 
+	@Override
+	public int delete(int id) {
+		String Sql = "delete from employee where id = ?";
+		int result = jdbcTemplate.update(Sql, id);
+		return result;
+	}
+
 	public JdbcTemplate getJdbcTemplate() {
 		return jdbcTemplate;
 	}
@@ -34,5 +41,7 @@ public class EmployeeDaoImpl implements employeeDao {
 		this.jdbcTemplate = jdbcTemplate;
 	}
 
+
+	
 
 }

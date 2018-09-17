@@ -1,9 +1,12 @@
 package com.jagan.spring.springjdbc.employee.dao.impl;
 
+import java.util.List;
+
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import com.jagan.spring.springjdbc.employee.dao.employeeDao;
 import com.jagan.spring.springjdbc.employee.dto.Employee;
+import com.jagan.spring.springjdbc.employee.rowmapper.EmployeeRowMapper;
 
 public class EmployeeDaoImpl implements employeeDao {
 
@@ -33,6 +36,24 @@ public class EmployeeDaoImpl implements employeeDao {
 		return result;
 	}
 
+	@Override
+	public Employee read(int id) {
+		String Sql =  "select * from employee where id=?";
+		EmployeeRowMapper rowMapper = new EmployeeRowMapper();
+		Employee result = jdbcTemplate.queryForObject(Sql, rowMapper, id);
+		return result;
+	}
+	
+	@Override
+	public List<Employee> findAlls() {
+		String sql = "Select * from employee";
+		EmployeeRowMapper rowMapper = new EmployeeRowMapper();
+		List<Employee> result = jdbcTemplate.query(sql, rowMapper);
+		return result;
+	}
+
+	
+
 	public JdbcTemplate getJdbcTemplate() {
 		return jdbcTemplate;
 	}
@@ -41,6 +62,10 @@ public class EmployeeDaoImpl implements employeeDao {
 		this.jdbcTemplate = jdbcTemplate;
 	}
 
+
+	
+
+	
 
 	
 

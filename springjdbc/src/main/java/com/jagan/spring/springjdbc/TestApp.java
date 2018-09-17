@@ -1,5 +1,7 @@
 package com.jagan.spring.springjdbc;
 
+import java.util.List;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -12,19 +14,29 @@ public class TestApp {
 		ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
 		EmployeeDaoImpl employeeDAO = (EmployeeDaoImpl) context.getBean("employeeDaoImpl");
 		Employee emp = new Employee();
-		emp.setId(1);
-		emp.setFirstName("Gariyashee");
-		emp.setLastName("Dutta");
+		emp.setId(3);
+		emp.setFirstName("Rajesh");
+		emp.setLastName("Handu");
 				
-		/*int result =  employeeDAO.create(emp);
+	/*	int result =  employeeDAO.create(emp);
 		System.out.println("Number of records inserted are: " + result);*/
+		
 		
 		/*int result = employeeDAO.update(emp);
 		
 		System.out.println("Number of records updated are: " + result);*/
 		
-		int result = employeeDAO.delete(1);
+		/*int result = employeeDAO.delete(1);
 		
-		System.out.println("Number of records deleted are: " + result);
+		System.out.println("Number of records deleted are: " + result);*/
+		
+		/*Employee result = employeeDAO.read(2);
+		
+		System.out.println("Number of records found are: " + result);*/
+		
+		
+		List<Employee> result = employeeDAO.findAlls();
+
+		System.out.println("Number of records found are: " + result);
 	}
 }

@@ -12,12 +12,15 @@ public class TestApp {
 		ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
 		EmployeeDaoImpl employeeDAO = (EmployeeDaoImpl) context.getBean("employeeDaoImpl");
 		Employee emp = new Employee();
-		emp.setId(2);
-		emp.setFirstName("Jagannath");
-		emp.setLastName("Mishra");
+		emp.setId(1);
+		emp.setFirstName("Gariyashee");
+		emp.setLastName("Dutta");
 				
-		int result =  employeeDAO.create(emp);
-		System.out.println("Number of records inserted are: " + result);
+		/*int result =  employeeDAO.create(emp);
+		System.out.println("Number of records inserted are: " + result);*/
 		
+		int result = employeeDAO.update(emp);
+		
+		System.out.println("Number of records updated are: " + result);
 	}
 }

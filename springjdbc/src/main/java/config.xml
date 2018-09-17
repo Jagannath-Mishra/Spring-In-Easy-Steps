@@ -13,6 +13,11 @@
 
 	<bean class="org.springframework.jdbc.core.JdbcTemplate" name="jdbcTemplate"
 		p:dataSource-ref="dataSource" />
-	
-	
+
+	<bean class="com.jagan.spring.springjdbc.employee.dao.impl.EmployeeDaoImpl"
+		name="employeeDaoImpl">
+		<property name="jdbcTemplate">
+			<ref bean="jdbcTemplate" />
+		</property>
+	</bean>
 </beans>

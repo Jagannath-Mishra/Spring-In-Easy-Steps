@@ -13,12 +13,15 @@ public class Test {
 	
 	ProductDao productDao = (ProductDao) context.getBean("productDaoImpl");
 	Product product = new Product();
-	product.setId(1);
-	product.setName("XBox");
+	product.setId(2);
+	product.setName("PS4");
 	product.setDesc("Gaming Console");
-	product.setPrice(25488.99);
-	int result = productDao.create(product);
+	product.setPrice(35488.99);
+	//int result = productDao.create(product);
 	
-	System.out.println("Data is inserted into database : " + result);
+	//System.out.println("Data is inserted into database : " + result);
+
+	productDao.update(product);
+	System.out.println("Data is updated into database : " );
 }
 }

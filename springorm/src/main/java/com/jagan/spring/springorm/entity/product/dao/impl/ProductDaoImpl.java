@@ -19,5 +19,11 @@ public class ProductDaoImpl implements ProductDao {
 		Integer result = (Integer) hibernateTemplate.save(product);
 		return result;
 	}
+	@Override
+	@Transactional
+	public void update(Product product) {
+		hibernateTemplate.update(product);
+		
+	}
 	
 }

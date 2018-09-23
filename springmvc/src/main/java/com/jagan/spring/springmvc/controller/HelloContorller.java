@@ -11,6 +11,10 @@ public class HelloContorller {
 	public ModelAndView hello(){
 		ModelAndView view = new ModelAndView();
 		view.setViewName("hello");
+		
+		view.addObject("id",123);
+		view.addObject("name", "Jagannath Mishra");
+		view.addObject("salary",25000.345);
 		return view;
 	}
 }

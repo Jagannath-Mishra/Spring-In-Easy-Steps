@@ -7,10 +7,17 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean name="emp" class="com.bharath.spring.springcore.Employee"
-		p:id="20" p:name="Bharath" />
-
-
-
+<bean name="cardealer" class="com.bharath.spring.springcore.set.CarDealer">
+	<property name="name">
+		<value>Hyderabad Dealer</value>
+	</property>
+	<property name="models">
+		<set> 
+			<value>Honda</value>
+			<value>BMW</value>
+			<value>Honda</value>
+		</set>
+	</property>
+</bean>
 
 </beans>

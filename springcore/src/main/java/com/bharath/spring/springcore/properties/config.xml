@@ -7,8 +7,15 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean name="emp" class="com.bharath.spring.springcore.Employee"
-		p:id="20" p:name="Bharath" />
+	<bean name="countriesAndLangs"
+		class="com.bharath.spring.springcore.properties.CountriesAndLanguages">
+		<property name="countryAndLangs">
+			<props>
+				<prop key="USA">English</prop>
+				<prop key="India">Hindi</prop>
+			</props>
+		</property>
+	</bean>
 
 
 

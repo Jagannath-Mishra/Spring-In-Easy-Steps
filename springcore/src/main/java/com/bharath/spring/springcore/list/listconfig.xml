@@ -7,10 +7,17 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean name="emp" class="com.bharath.spring.springcore.Employee"
-		p:id="20" p:name="Bharath" />
-
-
-
+<bean name="hospital" class="com.bharath.spring.springcore.list.Hospital">
+	<property name="name">
+		<value>Global Hospital</value>
+	</property>
+	<property name="departments">
+		<list> 
+			<value>Front Office</value>
+			<value>In Patient</value>
+			<value>Out Patient</value>
+		</list>
+	</property>
+</bean>
 
 </beans>
